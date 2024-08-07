@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+  perspective:800px;
+}
+
+
+        .cube{
+            text-align: center;
+           width: 150px;
+           height: 100px;
+            margin: auto;
+           position: relative;
+           top:100px;
+            font-size: 40px;
+            transform-style: preserve-3d;
+  transform: rotatex(-45deg) rotateY(30deg);
+        
+        }
+        .side{
+            width:100px;
+            height: 100px;
+            text-align: center;
+            border: 2px solid;
+            background-color: rgba(100,100,100,0.5);
+            position: absolute;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+               transition: 5s;
+        }
+        .one{
+           transform: translatez(50px) ;
+        }
+        .two{
+            transform: rotatex(-90deg) translatez(50px);
+        }
+        .three{
+            transform: rotatex(90deg) translatez(50px);
+        }
+        .four{
+            transform: rotateY(90deg) translateZ(50px);
+        }
+        .five{
+            transform: rotatey(-90deg) translateZ(50px);
+        }
+        .six{
+            transform: rotateX(180deg) translateZ(50px);
+        }
+   
+        button:hover + .cube{
+            transform: rotatex(3600deg);
+          
+        }
+        
+    </style>
+</head>
+<body>
+    <button>rotate</button>
+    <div class="cube">
+        <div class="side one">1</div>
+        <div class="side two">2</div>
+        <div class="side three">3</div>
+        <div class="side four">4</div>
+        <div class="side five">5</div>
+        <div class="side six">6</div>
+    </div>
+ 
+</body>
+</html>
